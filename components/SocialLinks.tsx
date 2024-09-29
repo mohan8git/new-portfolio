@@ -1,7 +1,7 @@
 export default function SocialLinks() {
   return (
     <ul
-      className='ml-1 mb-24 mt-8 lg:mt-60 flex items-center text-slate-300 space-x-5'
+      className='ml-1 mb-24 mt-8 lg:mt-60 flex items-center text-slate-300 space-x-5 px-4 lg:px-0'
       aria-label='Social media'
     >
       <li className='text-xs shrink-0'>

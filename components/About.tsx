@@ -1,11 +1,15 @@
 import React from 'react';
 
 const About = () => (
-  <>
+  <div className='px-2'>
     <p className='mb-4'>
       I started my journey in frontend development with a passion for creating
       user-centric applications. Now, as the{' '}
-      <a className='text-white hover:text-[#64ffda]' href=''>
+      <a
+        className='text-white hover:text-[#64ffda]'
+        href='https://unolo.com/'
+        target='_blank'
+      >
         Frontend Lead at Unolo
       </a>
       , I develop our field force management software, streamlining operations
@@ -22,7 +26,7 @@ const About = () => (
       technologies and best practices in the industry. I enjoy sharing knowledge
       through mentoring, helping others grow in their coding journeys.
     </p>
-  </>
+  </div>
 );
 
 export default About;
