@@ -2,6 +2,7 @@
 import About from '@/components/About';
 import ExperienceCard from '@/components/ExperienceCard';
 import NavBar from '@/components/NavLink';
+import Projects from '@/components/Projects';
 import Skills from '@/components/Skills';
 import SocialLinks from '@/components/SocialLinks';
 import experienceData, { ExperienceData } from '@/data';
@@ -83,23 +84,39 @@ export default function Home() {
             <About />
           </div>
         </div>
+        <div>
+          <div className='block lg:hidden font-bold sticky top-0 transparent z-10 p-6 backdrop-blur-sm w-full text-slate-50'>
+            EXPERIENCE
+          </div>
+          <div id='experience'>
+            {experienceData &&
+              experienceData.map(
+                (experience: ExperienceData, index: number) => (
+                  <ExperienceCard
+                    key={index}
+                    startString={experience.startString}
+                    endString={experience.endString}
+                    role={experience.role}
+                    companyName={experience.companyName}
+                    description={experience.description}
+                    skills={experience.skills}
+                  />
+                )
+              )}
+          </div>
+        </div>
 
         <div className='block lg:hidden font-bold sticky top-0 transparent z-10 p-6 backdrop-blur-sm w-full text-slate-50'>
-          EXPERIENCE
+          PROJECTS
         </div>
-        <div id='experience'>
-          {experienceData &&
-            experienceData.map((experience: ExperienceData, index: number) => (
-              <ExperienceCard
-                key={index}
-                startString={experience.startString}
-                endString={experience.endString}
-                role={experience.role}
-                companyName={experience.companyName}
-                description={experience.description}
-                skills={experience.skills}
-              />
-            ))}
+        <div id='projects' className='mt-12 lg:mt-24'>
+          <Projects
+            projectName='Terminal website'
+            description='This project is a web-based terminal built with Next.js and Tailwind CSS, simulating a CLI experience in the browser. It supports basic commands like clear, cat, ls, less, cd, and cd .., allowing users to explore a simulated file system. The terminal offers a clean, responsive design and real-time command execution, providing an intuitive user experience. Future enhancements could include more commands and session persistence.'
+            skills={['NEXTJS', 'TailwindCSS']}
+            imageLink={'/terminal.png'}
+            projectLink='https://terminal-website-xi.vercel.app/'
+          />
         </div>
         <div id='skills' className='mt-12 lg:mt-24'>
           <Skills />

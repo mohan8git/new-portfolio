@@ -15,7 +15,7 @@ export default function NavBar() {
   return (
     <nav className='hidden lg:block mb-6' aria-label='In-page jump links'>
       <ul className='mt-16 w-max'>
-        {['about', 'experience', 'skills'].map((id) => (
+        {['about', 'experience', 'projects', 'skills'].map((id) => (
           <li key={id}>
             <a
               className={`group flex items-center py-3`}
