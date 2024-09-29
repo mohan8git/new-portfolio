@@ -42,7 +42,7 @@ export default function Home() {
 
   return (
     <div className='h-screen overflow-hidden flex flex-col lg:flex-row lg:grid lg:grid-cols-2 lg:gap-4 overflow-y-auto'>
-      <div className='hidden md:block text-slate-200 lg:col-span-1 lg:ml-36 lg:sticky lg:top-0 h-full lg:h-screen p-4 sm:p-4'>
+      <div className='hidden lg:block text-slate-200 lg:col-span-1 lg:ml-36 lg:sticky lg:top-0 h-full lg:h-screen p-4 sm:p-4'>
         <h1 className='text-4xl font-bold sm:text-5xl mt-12 lg:mt-24'>
           <a href='/'>Mohan Bishnoi</a>
         </h1>
@@ -63,7 +63,7 @@ export default function Home() {
         ref={rightSectionRef}
         className='font-medium text-[#94A3b8] lg:col-span-1 lg:mr-36 text-[15px] sm:text-[17px] h-full lg:h-screen overflow-y-auto no-scrollbar p-4 sm:p-4'
       >
-        <div className='block md:hidden'>
+        <div className='block lg:hidden'>
           <h1 className='text-4xl font-bold sm:text-5xl mt-12 lg:mt-24'>
             <a href='/'>Mohan Bishnoi</a>
           </h1>
