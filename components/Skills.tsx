@@ -84,8 +84,10 @@ const svgs = {
 const Skills = () => {
   return (
     <div className='grid grid-cols-4 gap-8'>
-      {(Object.keys(svgs) as (keyof typeof svgs)[]).map((key) => (
-        <div className='w-12 h-12 hover:text-slate-50'>{svgs[key]}</div>
+      {(Object.keys(svgs) as (keyof typeof svgs)[]).map((key, index) => (
+        <div className='w-12 h-12 hover:text-slate-50' key={index}>
+          {svgs[key]}
+        </div>
       ))}
     </div>
   );
